@@ -6,6 +6,6 @@
 * Coming soon...
 
 ### ScreenShots
-![DDT with Junit](https://github.com/luongpd-dev/math-util-mvn/blob/main/sreenshot/DDT%20Spript%20Test.png)
+![DDT with Junit](https://github.com/luongpd-dev/math-util-mvn/blob/main/sreenshot/DDT%20Script%20Test.png)
 
 #### Copyright &#169; 2023 luongpd-dev
