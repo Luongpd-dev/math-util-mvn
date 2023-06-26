@@ -13,21 +13,41 @@ public class MathUtility {
     //do đó 21!   ko dùng kiểu long đc. Nếu đưa > 21, CHỬI
     //CHỬI: ko trả về giá trị gì cả mà NÉM RA NGOẠI LỆ EXCEPTION
 
+//    public static long getFactorial(int n) {
+//        long factorial = 1;
+//
+//        if (n == 0 || n == 1) {
+//            return 1;
+//        } else if (n >= 2 && n <= 20) {
+//            for (int i = 2; i <= n; i++) {
+//                factorial = factorial * i;
+//            }
+//        } else {
+//            throw new IllegalArgumentException("Invalid n . n must be between 0..20 pls");
+//        }
+//
+//        return factorial;
+//    }
+    
     public static long getFactorial(int n) {
-        long factorial = 1;
 
         if (n == 0 || n == 1) {
             return 1;
-        } else if (n >= 2 && n <= 20) {
-            for (int i = 2; i <= n; i++) {
-                factorial = factorial * i;
-            }
-        } else {
+        } 
+        else if (n < 0 || n > 20) {
             throw new IllegalArgumentException("Invalid n . n must be between 0..20 pls");
-        }
+        } 
 
-        return factorial;
+        return n * getFactorial(n - 1);
     }
+    //5! = 1.2.3.4.5 = 4!.5 
+    //4! = 4.3!
+    //3! = 3.2!
+    //2! = 2.1!
+    //1! = 1 DỪNG LẠI HỒI NGƯỢC LÊN
+    
+    //N! = N * (N-1)!
+    
     //TDD: Test Driven Development phát triển p/m theo phong cách
     //code dến đâu kiểm thử đến đó, viết code và viết code và viết test case/test run
     //diễn ra song song, đan xen
